@@ -1,10 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="jMenu1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="File"/>
+          </Properties>
+          <SubComponents>
+            <Menu class="javax.swing.JMenu" name="jMenu3">
+              <Properties>
+                <Property name="mnemonic" type="int" value="78"/>
+                <Property name="text" type="java.lang.String" value="New..."/>
+                <Property name="toolTipText" type="java.lang.String" value="Make a new document."/>
+                <Property name="name" type="java.lang.String" value="file_new" noResource="true"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+                  <Properties>
+                    <Property name="mnemonic" type="int" value="82"/>
+                    <Property name="text" type="java.lang.String" value="RR Article"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Makes a RR-styled document."/>
+                    <Property name="name" type="java.lang.String" value="file_new_rr" noResource="true"/>
+                  </Properties>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+                  <Properties>
+                    <Property name="mnemonic" type="int" value="66"/>
+                    <Property name="text" type="java.lang.String" value="BBCode Document"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Makes a BBCode document."/>
+                    <Property name="name" type="java.lang.String" value="file_new_bb" noResource="true"/>
+                  </Properties>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
+              <Properties>
+                <Property name="mnemonic" type="int" value="79"/>
+                <Property name="text" type="java.lang.String" value="Open..."/>
+                <Property name="toolTipText" type="java.lang.String" value="Open a document."/>
+                <Property name="name" type="java.lang.String" value="file_open" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
+              <Properties>
+                <Property name="mnemonic" type="int" value="83"/>
+                <Property name="text" type="java.lang.String" value="Save"/>
+                <Property name="toolTipText" type="java.lang.String" value="Saves the current document."/>
+                <Property name="name" type="java.lang.String" value="file_save" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
+              <Properties>
+                <Property name="mnemonic" type="int" value="65"/>
+                <Property name="text" type="java.lang.String" value="Save As..."/>
+                <Property name="toolTipText" type="java.lang.String" value="Saves as a new document."/>
+                <Property name="name" type="java.lang.String" value="file_saveas" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator1">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem6">
+              <Properties>
+                <Property name="mnemonic" type="int" value="69"/>
+                <Property name="text" type="java.lang.String" value="Exit"/>
+                <Property name="toolTipText" type="java.lang.String" value="Exits Vibrancy."/>
+                <Property name="name" type="java.lang.String" value="file_exit" noResource="true"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenu2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Edit"/>
+          </Properties>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Vibrancy Text Editor"/>
+    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+      <Color id="Default Cursor"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
@@ -28,7 +111,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="279" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>

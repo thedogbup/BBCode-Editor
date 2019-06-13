@@ -1,13 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/*  :::::::::::::::::::::::::::::::::::  MainFrame.java
+ * " r- -T                  |          " Author: Lance (Bup)
+ * "_+_  |  _        _  ,__ |_   _     " 13 JUNE 2019
+ * " |   | / \ \  / /_\ r   | \ / \ \/ " Description:
+ * " |   | \_/  VV  \_  |   \_J \_/ /\ " The main GUI for Vibrancy 
+ * ":::::::::::::::::::::::::::::::::::" 
  */
 package Vibrancy;
 
 /**
  *
- * @author lance
+ * @author lance/Bup
  */
 public class MainFrame extends javax.swing.JFrame {
 
@@ -27,7 +29,74 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Vibrancy Text Editor");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jMenu1.setText("File");
+
+        jMenu3.setMnemonic('N');
+        jMenu3.setText("New...");
+        jMenu3.setToolTipText("Make a new document.");
+        jMenu3.setName("file_new"); // NOI18N
+
+        jMenuItem1.setMnemonic('R');
+        jMenuItem1.setText("RR Article");
+        jMenuItem1.setToolTipText("Makes a RR-styled document.");
+        jMenuItem1.setName("file_new_rr"); // NOI18N
+        jMenu3.add(jMenuItem1);
+
+        jMenuItem2.setMnemonic('B');
+        jMenuItem2.setText("BBCode Document");
+        jMenuItem2.setToolTipText("Makes a BBCode document.");
+        jMenuItem2.setName("file_new_bb"); // NOI18N
+        jMenu3.add(jMenuItem2);
+
+        jMenu1.add(jMenu3);
+
+        jMenuItem3.setMnemonic('O');
+        jMenuItem3.setText("Open...");
+        jMenuItem3.setToolTipText("Open a document.");
+        jMenuItem3.setName("file_open"); // NOI18N
+        jMenu1.add(jMenuItem3);
+
+        jMenuItem4.setMnemonic('S');
+        jMenuItem4.setText("Save");
+        jMenuItem4.setToolTipText("Saves the current document.");
+        jMenuItem4.setName("file_save"); // NOI18N
+        jMenu1.add(jMenuItem4);
+
+        jMenuItem5.setMnemonic('A');
+        jMenuItem5.setText("Save As...");
+        jMenuItem5.setToolTipText("Saves as a new document.");
+        jMenuItem5.setName("file_saveas"); // NOI18N
+        jMenu1.add(jMenuItem5);
+        jMenu1.add(jSeparator1);
+
+        jMenuItem6.setMnemonic('E');
+        jMenuItem6.setText("Exit");
+        jMenuItem6.setToolTipText("Exits Vibrancy.");
+        jMenuItem6.setName("file_exit"); // NOI18N
+        jMenu1.add(jMenuItem6);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -37,7 +106,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 279, Short.MAX_VALUE)
         );
 
         pack();
@@ -79,5 +148,16 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

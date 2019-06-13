@@ -1,7 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/*  :::::::::::::::::::::::::::::::::::  Main.java
+ * " r- -T                  |          " Author: Lance (Bup)
+ * "_+_  |  _        _  ,__ |_   _     " 13 JUNE 2019
+ * " |   | / \ \  / /_\ r   | \ / \ \/ " Description:
+ * " |   | \_/  VV  \_  |   \_J \_/ /\ " The main method for Vibrancy 
+ * ":::::::::::::::::::::::::::::::::::" 
  */
 package Vibrancy;
 
