@@ -40,24 +40,55 @@ public class MainFrame extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
+        jMenuItem14 = new javax.swing.JMenuItem();
+        jSeparator3 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem12 = new javax.swing.JMenuItem();
+        jMenuItem13 = new javax.swing.JMenuItem();
+        jSeparator4 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem15 = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuItem16 = new javax.swing.JMenuItem();
+        jMenuItem17 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
+        jMenuItem19 = new javax.swing.JMenuItem();
+        jMenuItem20 = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        jMenuItem23 = new javax.swing.JMenuItem();
+        jMenuItem24 = new javax.swing.JMenuItem();
+        jMenuItem25 = new javax.swing.JMenuItem();
+        jMenuItem26 = new javax.swing.JMenuItem();
+        jMenuItem21 = new javax.swing.JMenuItem();
+        jMenuItem22 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vibrancy Text Editor");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        jMenu1.setMnemonic('F');
         jMenu1.setText("File");
+        jMenu1.setToolTipText("");
+        jMenu1.setName("file"); // NOI18N
 
         jMenu3.setMnemonic('N');
         jMenu3.setText("New...");
         jMenu3.setToolTipText("Make a new document.");
         jMenu3.setName("file_new"); // NOI18N
 
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem1.setMnemonic('R');
         jMenuItem1.setText("RR Article");
         jMenuItem1.setToolTipText("Makes a RR-styled document.");
         jMenuItem1.setName("file_new_rr"); // NOI18N
         jMenu3.add(jMenuItem1);
 
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem2.setMnemonic('B');
         jMenuItem2.setText("BBCode Document");
         jMenuItem2.setToolTipText("Makes a BBCode document.");
@@ -66,18 +97,21 @@ public class MainFrame extends javax.swing.JFrame {
 
         jMenu1.add(jMenu3);
 
+        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem3.setMnemonic('O');
         jMenuItem3.setText("Open...");
         jMenuItem3.setToolTipText("Open a document.");
         jMenuItem3.setName("file_open"); // NOI18N
         jMenu1.add(jMenuItem3);
 
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem4.setMnemonic('S');
         jMenuItem4.setText("Save");
         jMenuItem4.setToolTipText("Saves the current document.");
         jMenuItem4.setName("file_save"); // NOI18N
         jMenu1.add(jMenuItem4);
 
+        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem5.setMnemonic('A');
         jMenuItem5.setText("Save As...");
         jMenuItem5.setToolTipText("Saves as a new document.");
@@ -85,7 +119,8 @@ public class MainFrame extends javax.swing.JFrame {
         jMenu1.add(jMenuItem5);
         jMenu1.add(jSeparator1);
 
-        jMenuItem6.setMnemonic('E');
+        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem6.setMnemonic('x');
         jMenuItem6.setText("Exit");
         jMenuItem6.setToolTipText("Exits Vibrancy.");
         jMenuItem6.setName("file_exit"); // NOI18N
@@ -93,8 +128,180 @@ public class MainFrame extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setMnemonic('E');
         jMenu2.setText("Edit");
+        jMenu2.setToolTipText("");
+        jMenu2.setName("edit"); // NOI18N
+
+        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Z, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem7.setMnemonic('u');
+        jMenuItem7.setText("Undo");
+        jMenuItem7.setToolTipText("Undo the previous action.");
+        jMenuItem7.setEnabled(false);
+        jMenuItem7.setName("edit_undo"); // NOI18N
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem7);
+
+        jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Y, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem8.setMnemonic('R');
+        jMenuItem8.setText("Redo");
+        jMenuItem8.setToolTipText("Redo the last action.");
+        jMenuItem8.setEnabled(false);
+        jMenuItem8.setName("edit_redo"); // NOI18N
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem8);
+        jMenu2.add(jSeparator2);
+
+        jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem9.setText("Copy");
+        jMenuItem9.setToolTipText("Copies the selected text to the clipboard.");
+        jMenuItem9.setEnabled(false);
+        jMenuItem9.setName("edit_copy"); // NOI18N
+        jMenu2.add(jMenuItem9);
+
+        jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem10.setText("Cut");
+        jMenuItem10.setToolTipText("Cuts the selected text to the clipboard.");
+        jMenuItem10.setEnabled(false);
+        jMenuItem10.setName("edit_cut"); // NOI18N
+        jMenu2.add(jMenuItem10);
+
+        jMenuItem11.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem11.setText("Paste");
+        jMenuItem11.setToolTipText("Pastes from clipboard.");
+        jMenuItem11.setEnabled(false);
+        jMenuItem11.setName("edit_paste"); // NOI18N
+        jMenu2.add(jMenuItem11);
+
+        jMenuItem14.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_DELETE, 0));
+        jMenuItem14.setText("Delete");
+        jMenuItem14.setToolTipText("Deletes selected text.");
+        jMenuItem14.setEnabled(false);
+        jMenuItem14.setName("edit_del"); // NOI18N
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem14ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem14);
+        jMenu2.add(jSeparator3);
+
+        jMenuItem12.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem12.setMnemonic('i');
+        jMenuItem12.setText("Find...");
+        jMenuItem12.setToolTipText("Find instances of text.");
+        jMenuItem12.setName("edit_find"); // NOI18N
+        jMenu2.add(jMenuItem12);
+
+        jMenuItem13.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem13.setMnemonic('p');
+        jMenuItem13.setText("Replace...");
+        jMenuItem13.setToolTipText("Find and replace text.");
+        jMenuItem13.setName("edit_replace"); // NOI18N
+        jMenu2.add(jMenuItem13);
+        jMenu2.add(jSeparator4);
+
+        jMenuItem15.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem15.setText("Select All");
+        jMenuItem15.setToolTipText("Select all text.");
+        jMenuItem15.setName("edit_selectall"); // NOI18N
+        jMenu2.add(jMenuItem15);
+
         jMenuBar1.add(jMenu2);
+
+        jMenu4.setMnemonic('F');
+        jMenu4.setText("Format");
+        jMenu4.setToolTipText("");
+        jMenu4.setName("format"); // NOI18N
+
+        jMenu5.setMnemonic('t');
+        jMenu5.setText("Text...");
+        jMenu5.setToolTipText("Basic text tools.");
+        jMenu5.setName("format_text"); // NOI18N
+
+        jMenuItem16.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem16.setText("Bold");
+        jMenuItem16.setToolTipText("Bold text.");
+        jMenuItem16.setName("format_text_bold"); // NOI18N
+        jMenu5.add(jMenuItem16);
+
+        jMenuItem17.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem17.setText("Italics");
+        jMenuItem17.setToolTipText("Italicize text.");
+        jMenuItem17.setName("format_text_italic"); // NOI18N
+        jMenu5.add(jMenuItem17);
+
+        jMenuItem18.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem18.setText("Underline");
+        jMenuItem18.setToolTipText("Underline text.");
+        jMenuItem18.setName("format_text_underline"); // NOI18N
+        jMenu5.add(jMenuItem18);
+
+        jMenuItem19.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem19.setText("Strikethrough");
+        jMenuItem19.setToolTipText("Strike text.");
+        jMenuItem19.setName("format_text_strike"); // NOI18N
+        jMenu5.add(jMenuItem19);
+
+        jMenu4.add(jMenu5);
+
+        jMenuItem20.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK));
+        jMenuItem20.setText("Color...");
+        jMenuItem20.setToolTipText("Color text.");
+        jMenuItem20.setName("format_color"); // NOI18N
+        jMenu4.add(jMenuItem20);
+
+        jMenu6.setText("Align...");
+        jMenu6.setToolTipText("Aligns text.");
+        jMenu6.setName("format_align"); // NOI18N
+
+        jMenuItem23.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem23.setText("Left");
+        jMenuItem23.setToolTipText("Aligns text to the left (Default).");
+        jMenuItem23.setName("format_align_left"); // NOI18N
+        jMenu6.add(jMenuItem23);
+
+        jMenuItem24.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem24.setText("Center");
+        jMenuItem24.setToolTipText("Align text to the center.");
+        jMenuItem24.setName("format_align_center"); // NOI18N
+        jMenu6.add(jMenuItem24);
+
+        jMenuItem25.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem25.setText("Right");
+        jMenuItem25.setToolTipText("Aligns text to the right.");
+        jMenuItem25.setName("format_align_right"); // NOI18N
+        jMenu6.add(jMenuItem25);
+
+        jMenuItem26.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_J, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem26.setText("Justify");
+        jMenuItem26.setToolTipText("Justifies text.");
+        jMenuItem26.setName("format_align_justify"); // NOI18N
+        jMenu6.add(jMenuItem26);
+
+        jMenu4.add(jMenu6);
+
+        jMenuItem21.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.ALT_MASK));
+        jMenuItem21.setText("Quote...");
+        jMenuItem21.setToolTipText("Puts the text into a quotation.");
+        jMenuItem21.setName("format_quote"); // NOI18N
+        jMenu4.add(jMenuItem21);
+
+        jMenuItem22.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.ALT_MASK));
+        jMenuItem22.setText("Code...");
+        jMenuItem22.setToolTipText("Puts the text into code format.");
+        jMenuItem22.setName("format_code"); // NOI18N
+        jMenu4.add(jMenuItem22);
+
+        jMenuBar1.add(jMenu4);
 
         setJMenuBar(jMenuBar1);
 
@@ -111,6 +318,18 @@ public class MainFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,13 +370,39 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
+    private javax.swing.JMenuItem jMenuItem14;
+    private javax.swing.JMenuItem jMenuItem15;
+    private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem17;
+    private javax.swing.JMenuItem jMenuItem18;
+    private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem21;
+    private javax.swing.JMenuItem jMenuItem22;
+    private javax.swing.JMenuItem jMenuItem23;
+    private javax.swing.JMenuItem jMenuItem24;
+    private javax.swing.JMenuItem jMenuItem25;
+    private javax.swing.JMenuItem jMenuItem26;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JPopupMenu.Separator jSeparator4;
     // End of variables declaration//GEN-END:variables
 }
