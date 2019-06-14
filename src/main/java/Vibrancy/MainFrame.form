@@ -2,9 +2,12 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+    <Menu class="javax.swing.JMenuBar" name="menubar">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="menu" noResource="true"/>
+      </Properties>
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="jMenu1">
+        <Menu class="javax.swing.JMenu" name="file">
           <Properties>
             <Property name="mnemonic" type="int" value="70"/>
             <Property name="text" type="java.lang.String" value="File"/>
@@ -12,7 +15,7 @@
             <Property name="name" type="java.lang.String" value="file" noResource="true"/>
           </Properties>
           <SubComponents>
-            <Menu class="javax.swing.JMenu" name="jMenu3">
+            <Menu class="javax.swing.JMenu" name="file_new">
               <Properties>
                 <Property name="mnemonic" type="int" value="78"/>
                 <Property name="text" type="java.lang.String" value="New..."/>
@@ -20,7 +23,7 @@
                 <Property name="name" type="java.lang.String" value="file_new" noResource="true"/>
               </Properties>
               <SubComponents>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+                <MenuItem class="javax.swing.JMenuItem" name="file_new_rr">
                   <Properties>
                     <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                       <KeyStroke key="Ctrl+N"/>
@@ -31,7 +34,7 @@
                     <Property name="name" type="java.lang.String" value="file_new_rr" noResource="true"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+                <MenuItem class="javax.swing.JMenuItem" name="file_new_bb">
                   <Properties>
                     <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                       <KeyStroke key="Shift+Ctrl+N"/>
@@ -44,7 +47,7 @@
                 </MenuItem>
               </SubComponents>
             </Menu>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
+            <MenuItem class="javax.swing.JMenuItem" name="file_open">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+O"/>
@@ -55,7 +58,7 @@
                 <Property name="name" type="java.lang.String" value="file_open" noResource="true"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
+            <MenuItem class="javax.swing.JMenuItem" name="file_save">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+S"/>
@@ -66,7 +69,7 @@
                 <Property name="name" type="java.lang.String" value="file_save" noResource="true"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
+            <MenuItem class="javax.swing.JMenuItem" name="file_saveas">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Shift+Ctrl+S"/>
@@ -79,7 +82,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator1">
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem6">
+            <MenuItem class="javax.swing.JMenuItem" name="file_exit">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+Q"/>
@@ -89,10 +92,13 @@
                 <Property name="toolTipText" type="java.lang.String" value="Exits Vibrancy."/>
                 <Property name="name" type="java.lang.String" value="file_exit" noResource="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="file_exitActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu2">
+        <Menu class="javax.swing.JMenu" name="edit">
           <Properties>
             <Property name="mnemonic" type="int" value="69"/>
             <Property name="text" type="java.lang.String" value="Edit"/>
@@ -100,7 +106,7 @@
             <Property name="name" type="java.lang.String" value="edit" noResource="true"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem7">
+            <MenuItem class="javax.swing.JMenuItem" name="edit_undo">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+Z"/>
@@ -112,10 +118,10 @@
                 <Property name="name" type="java.lang.String" value="edit_undo" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem7ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edit_undoActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem8">
+            <MenuItem class="javax.swing.JMenuItem" name="edit_redo">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+Y"/>
@@ -127,61 +133,65 @@
                 <Property name="name" type="java.lang.String" value="edit_redo" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem8ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edit_redoActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator2">
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem9">
+            <MenuItem class="javax.swing.JMenuItem" name="edit_copy">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+C"/>
                 </Property>
+                <Property name="mnemonic" type="int" value="99"/>
                 <Property name="text" type="java.lang.String" value="Copy"/>
                 <Property name="toolTipText" type="java.lang.String" value="Copies the selected text to the clipboard."/>
                 <Property name="enabled" type="boolean" value="false"/>
                 <Property name="name" type="java.lang.String" value="edit_copy" noResource="true"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem10">
+            <MenuItem class="javax.swing.JMenuItem" name="edit_cut">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+X"/>
                 </Property>
+                <Property name="mnemonic" type="int" value="117"/>
                 <Property name="text" type="java.lang.String" value="Cut"/>
                 <Property name="toolTipText" type="java.lang.String" value="Cuts the selected text to the clipboard."/>
                 <Property name="enabled" type="boolean" value="false"/>
                 <Property name="name" type="java.lang.String" value="edit_cut" noResource="true"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem11">
+            <MenuItem class="javax.swing.JMenuItem" name="edit_paste">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+V"/>
                 </Property>
+                <Property name="mnemonic" type="int" value="112"/>
                 <Property name="text" type="java.lang.String" value="Paste"/>
                 <Property name="toolTipText" type="java.lang.String" value="Pastes from clipboard."/>
                 <Property name="enabled" type="boolean" value="false"/>
                 <Property name="name" type="java.lang.String" value="edit_paste" noResource="true"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem14">
+            <MenuItem class="javax.swing.JMenuItem" name="edit_del">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="DELETE"/>
                 </Property>
+                <Property name="mnemonic" type="int" value="100"/>
                 <Property name="text" type="java.lang.String" value="Delete"/>
                 <Property name="toolTipText" type="java.lang.String" value="Deletes selected text."/>
                 <Property name="enabled" type="boolean" value="false"/>
                 <Property name="name" type="java.lang.String" value="edit_del" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem14ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edit_delActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator3">
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem12">
+            <MenuItem class="javax.swing.JMenuItem" name="edit_find">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+F"/>
@@ -192,12 +202,12 @@
                 <Property name="name" type="java.lang.String" value="edit_find" noResource="true"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem13">
+            <MenuItem class="javax.swing.JMenuItem" name="edit_replace">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+H"/>
                 </Property>
-                <Property name="mnemonic" type="int" value="112"/>
+                <Property name="mnemonic" type="int" value="114"/>
                 <Property name="text" type="java.lang.String" value="Replace..."/>
                 <Property name="toolTipText" type="java.lang.String" value="Find and replace text."/>
                 <Property name="name" type="java.lang.String" value="edit_replace" noResource="true"/>
@@ -205,19 +215,33 @@
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator4">
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem15">
+            <MenuItem class="javax.swing.JMenuItem" name="edit_selectall">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+A"/>
                 </Property>
+                <Property name="mnemonic" type="int" value="97"/>
                 <Property name="text" type="java.lang.String" value="Select All"/>
                 <Property name="toolTipText" type="java.lang.String" value="Select all text."/>
                 <Property name="name" type="java.lang.String" value="edit_selectall" noResource="true"/>
               </Properties>
             </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator7">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="edit_prefs">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+P"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="112"/>
+                <Property name="text" type="java.lang.String" value="Preferences..."/>
+                <Property name="toolTipText" type="java.lang.String" value="Adjust the settings."/>
+                <Property name="name" type="java.lang.String" value="edit_prefs" noResource="true"/>
+              </Properties>
+            </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu4">
+        <Menu class="javax.swing.JMenu" name="format">
           <Properties>
             <Property name="mnemonic" type="int" value="70"/>
             <Property name="text" type="java.lang.String" value="Format"/>
@@ -225,7 +249,7 @@
             <Property name="name" type="java.lang.String" value="format" noResource="true"/>
           </Properties>
           <SubComponents>
-            <Menu class="javax.swing.JMenu" name="jMenu5">
+            <Menu class="javax.swing.JMenu" name="format_text">
               <Properties>
                 <Property name="mnemonic" type="int" value="116"/>
                 <Property name="text" type="java.lang.String" value="Text..."/>
@@ -233,41 +257,45 @@
                 <Property name="name" type="java.lang.String" value="format_text" noResource="true"/>
               </Properties>
               <SubComponents>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem16">
+                <MenuItem class="javax.swing.JMenuItem" name="format_text_bold">
                   <Properties>
                     <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                       <KeyStroke key="Ctrl+B"/>
                     </Property>
+                    <Property name="mnemonic" type="int" value="98"/>
                     <Property name="text" type="java.lang.String" value="Bold"/>
                     <Property name="toolTipText" type="java.lang.String" value="Bold text."/>
                     <Property name="name" type="java.lang.String" value="format_text_bold" noResource="true"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem17">
+                <MenuItem class="javax.swing.JMenuItem" name="format_text_italic">
                   <Properties>
                     <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                       <KeyStroke key="Ctrl+I"/>
                     </Property>
+                    <Property name="mnemonic" type="int" value="105"/>
                     <Property name="text" type="java.lang.String" value="Italics"/>
                     <Property name="toolTipText" type="java.lang.String" value="Italicize text."/>
                     <Property name="name" type="java.lang.String" value="format_text_italic" noResource="true"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem18">
+                <MenuItem class="javax.swing.JMenuItem" name="format_text_underline">
                   <Properties>
                     <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                       <KeyStroke key="Ctrl+U"/>
                     </Property>
+                    <Property name="mnemonic" type="int" value="117"/>
                     <Property name="text" type="java.lang.String" value="Underline"/>
                     <Property name="toolTipText" type="java.lang.String" value="Underline text."/>
                     <Property name="name" type="java.lang.String" value="format_text_underline" noResource="true"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem19">
+                <MenuItem class="javax.swing.JMenuItem" name="format_text_strike">
                   <Properties>
                     <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                       <KeyStroke key="Shift+Ctrl+S"/>
                     </Property>
+                    <Property name="mnemonic" type="int" value="115"/>
                     <Property name="text" type="java.lang.String" value="Strikethrough"/>
                     <Property name="toolTipText" type="java.lang.String" value="Strike text."/>
                     <Property name="name" type="java.lang.String" value="format_text_strike" noResource="true"/>
@@ -275,58 +303,72 @@
                 </MenuItem>
               </SubComponents>
             </Menu>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem20">
+            <MenuItem class="javax.swing.JMenuItem" name="format_color">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Alt+C"/>
                 </Property>
+                <Property name="mnemonic" type="int" value="99"/>
                 <Property name="text" type="java.lang.String" value="Color..."/>
                 <Property name="toolTipText" type="java.lang.String" value="Color text."/>
                 <Property name="name" type="java.lang.String" value="format_color" noResource="true"/>
               </Properties>
             </MenuItem>
-            <Menu class="javax.swing.JMenu" name="jMenu6">
+            <MenuItem class="javax.swing.JMenuItem" name="format_size">
               <Properties>
+                <Property name="mnemonic" type="int" value="115"/>
+                <Property name="text" type="java.lang.String" value="Size..."/>
+                <Property name="toolTipText" type="java.lang.String" value="Change text size."/>
+                <Property name="name" type="java.lang.String" value="format_size" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <Menu class="javax.swing.JMenu" name="formula_align">
+              <Properties>
+                <Property name="mnemonic" type="int" value="97"/>
                 <Property name="text" type="java.lang.String" value="Align..."/>
                 <Property name="toolTipText" type="java.lang.String" value="Aligns text."/>
                 <Property name="name" type="java.lang.String" value="format_align" noResource="true"/>
               </Properties>
               <SubComponents>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem23">
+                <MenuItem class="javax.swing.JMenuItem" name="format_align_left">
                   <Properties>
                     <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                       <KeyStroke key="Ctrl+L"/>
                     </Property>
+                    <Property name="mnemonic" type="int" value="108"/>
                     <Property name="text" type="java.lang.String" value="Left"/>
                     <Property name="toolTipText" type="java.lang.String" value="Aligns text to the left (Default)."/>
                     <Property name="name" type="java.lang.String" value="format_align_left" noResource="true"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem24">
+                <MenuItem class="javax.swing.JMenuItem" name="format_align_center">
                   <Properties>
                     <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                       <KeyStroke key="Ctrl+E"/>
                     </Property>
+                    <Property name="mnemonic" type="int" value="99"/>
                     <Property name="text" type="java.lang.String" value="Center"/>
                     <Property name="toolTipText" type="java.lang.String" value="Align text to the center."/>
                     <Property name="name" type="java.lang.String" value="format_align_center" noResource="true"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem25">
+                <MenuItem class="javax.swing.JMenuItem" name="format_align_right">
                   <Properties>
                     <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                       <KeyStroke key="Ctrl+R"/>
                     </Property>
+                    <Property name="mnemonic" type="int" value="114"/>
                     <Property name="text" type="java.lang.String" value="Right"/>
                     <Property name="toolTipText" type="java.lang.String" value="Aligns text to the right."/>
                     <Property name="name" type="java.lang.String" value="format_align_right" noResource="true"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem26">
+                <MenuItem class="javax.swing.JMenuItem" name="format_align_justify">
                   <Properties>
                     <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                       <KeyStroke key="Ctrl+J"/>
                     </Property>
+                    <Property name="mnemonic" type="int" value="106"/>
                     <Property name="text" type="java.lang.String" value="Justify"/>
                     <Property name="toolTipText" type="java.lang.String" value="Justifies text."/>
                     <Property name="name" type="java.lang.String" value="format_align_justify" noResource="true"/>
@@ -334,24 +376,114 @@
                 </MenuItem>
               </SubComponents>
             </Menu>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem21">
+            <MenuItem class="javax.swing.JMenuItem" name="format_quote">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Alt+Q"/>
                 </Property>
+                <Property name="mnemonic" type="int" value="113"/>
                 <Property name="text" type="java.lang.String" value="Quote..."/>
                 <Property name="toolTipText" type="java.lang.String" value="Puts the text into a quotation."/>
                 <Property name="name" type="java.lang.String" value="format_quote" noResource="true"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem22">
+            <MenuItem class="javax.swing.JMenuItem" name="format_code">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Alt+O"/>
                 </Property>
+                <Property name="mnemonic" type="int" value="111"/>
                 <Property name="text" type="java.lang.String" value="Code..."/>
                 <Property name="toolTipText" type="java.lang.String" value="Puts the text into code format."/>
                 <Property name="name" type="java.lang.String" value="format_code" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="format_separator">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Alt+S"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="105"/>
+                <Property name="text" type="java.lang.String" value="Insert separator"/>
+                <Property name="toolTipText" type="java.lang.String" value="Insters a horizontal separator."/>
+                <Property name="name" type="java.lang.String" value="format_separator" noResource="true"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="view">
+          <Properties>
+            <Property name="mnemonic" type="int" value="118"/>
+            <Property name="text" type="java.lang.String" value="View"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="name" type="java.lang.String" value="view" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="view_in">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+EQUALS"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="105"/>
+                <Property name="text" type="java.lang.String" value="Zoom In"/>
+                <Property name="toolTipText" type="java.lang.String" value="Increases the zoom."/>
+                <Property name="name" type="java.lang.String" value="view_zoomin" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="view_inActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="view_out">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+MINUS"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="79"/>
+                <Property name="text" type="java.lang.String" value="Zoom Out"/>
+                <Property name="toolTipText" type="java.lang.String" value="Decreases the zoom."/>
+                <Property name="name" type="java.lang.String" value="view_zoomout" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator5">
+            </MenuItem>
+            <MenuItem class="javax.swing.JCheckBoxMenuItem" name="view_statusbar">
+              <Properties>
+                <Property name="mnemonic" type="int" value="115"/>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" value="Status Bar"/>
+                <Property name="toolTipText" type="java.lang.String" value="Toggles the status bar."/>
+                <Property name="name" type="java.lang.String" value="view_statusbar" noResource="true"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="help">
+          <Properties>
+            <Property name="mnemonic" type="int" value="104"/>
+            <Property name="text" type="java.lang.String" value="Help"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="name" type="java.lang.String" value="help" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="help_man">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="F1"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="117"/>
+                <Property name="text" type="java.lang.String" value="User Manual"/>
+                <Property name="toolTipText" type="java.lang.String" value="Opens the manual."/>
+                <Property name="name" type="java.lang.String" value="help_man" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator6">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="help_about">
+              <Properties>
+                <Property name="mnemonic" type="int" value="97"/>
+                <Property name="text" type="java.lang.String" value="About Vibrancy"/>
+                <Property name="toolTipText" type="java.lang.String" value="What even is this?"/>
+                <Property name="name" type="java.lang.String" value="help_about" noResource="true"/>
               </Properties>
             </MenuItem>
           </SubComponents>
@@ -367,7 +499,7 @@
     </Property>
   </Properties>
   <SyntheticProperties>
-    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="menubar"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
@@ -386,13 +518,58 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Component id="statusbar" alignment="0" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="279" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="269" max="32767" attributes="0"/>
+              <Component id="statusbar" min="-2" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="statusbar">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="name" type="java.lang.String" value="statusbar" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="progressbar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="254" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="progressbar" min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JProgressBar" name="progressbar">
+          <Properties>
+            <Property name="focusable" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
 </Form>

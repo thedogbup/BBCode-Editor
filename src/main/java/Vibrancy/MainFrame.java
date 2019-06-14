@@ -29,380 +29,543 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        statusbar = new javax.swing.JPanel();
+        progressbar = new javax.swing.JProgressBar();
+        menubar = new javax.swing.JMenuBar();
+        file = new javax.swing.JMenu();
+        file_new = new javax.swing.JMenu();
+        file_new_rr = new javax.swing.JMenuItem();
+        file_new_bb = new javax.swing.JMenuItem();
+        file_open = new javax.swing.JMenuItem();
+        file_save = new javax.swing.JMenuItem();
+        file_saveas = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
+        file_exit = new javax.swing.JMenuItem();
+        edit = new javax.swing.JMenu();
+        edit_undo = new javax.swing.JMenuItem();
+        edit_redo = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
+        edit_copy = new javax.swing.JMenuItem();
+        edit_cut = new javax.swing.JMenuItem();
+        edit_paste = new javax.swing.JMenuItem();
+        edit_del = new javax.swing.JMenuItem();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem12 = new javax.swing.JMenuItem();
-        jMenuItem13 = new javax.swing.JMenuItem();
+        edit_find = new javax.swing.JMenuItem();
+        edit_replace = new javax.swing.JMenuItem();
         jSeparator4 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem15 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem16 = new javax.swing.JMenuItem();
-        jMenuItem17 = new javax.swing.JMenuItem();
-        jMenuItem18 = new javax.swing.JMenuItem();
-        jMenuItem19 = new javax.swing.JMenuItem();
-        jMenuItem20 = new javax.swing.JMenuItem();
-        jMenu6 = new javax.swing.JMenu();
-        jMenuItem23 = new javax.swing.JMenuItem();
-        jMenuItem24 = new javax.swing.JMenuItem();
-        jMenuItem25 = new javax.swing.JMenuItem();
-        jMenuItem26 = new javax.swing.JMenuItem();
-        jMenuItem21 = new javax.swing.JMenuItem();
-        jMenuItem22 = new javax.swing.JMenuItem();
+        edit_selectall = new javax.swing.JMenuItem();
+        jSeparator7 = new javax.swing.JPopupMenu.Separator();
+        edit_prefs = new javax.swing.JMenuItem();
+        format = new javax.swing.JMenu();
+        format_text = new javax.swing.JMenu();
+        format_text_bold = new javax.swing.JMenuItem();
+        format_text_italic = new javax.swing.JMenuItem();
+        format_text_underline = new javax.swing.JMenuItem();
+        format_text_strike = new javax.swing.JMenuItem();
+        format_color = new javax.swing.JMenuItem();
+        format_size = new javax.swing.JMenuItem();
+        formula_align = new javax.swing.JMenu();
+        format_align_left = new javax.swing.JMenuItem();
+        format_align_center = new javax.swing.JMenuItem();
+        format_align_right = new javax.swing.JMenuItem();
+        format_align_justify = new javax.swing.JMenuItem();
+        format_quote = new javax.swing.JMenuItem();
+        format_code = new javax.swing.JMenuItem();
+        format_separator = new javax.swing.JMenuItem();
+        view = new javax.swing.JMenu();
+        view_in = new javax.swing.JMenuItem();
+        view_out = new javax.swing.JMenuItem();
+        jSeparator5 = new javax.swing.JPopupMenu.Separator();
+        view_statusbar = new javax.swing.JCheckBoxMenuItem();
+        help = new javax.swing.JMenu();
+        help_man = new javax.swing.JMenuItem();
+        jSeparator6 = new javax.swing.JPopupMenu.Separator();
+        help_about = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vibrancy Text Editor");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jMenu1.setMnemonic('F');
-        jMenu1.setText("File");
-        jMenu1.setToolTipText("");
-        jMenu1.setName("file"); // NOI18N
+        statusbar.setBackground(new java.awt.Color(255, 255, 255));
+        statusbar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        statusbar.setFocusable(false);
+        statusbar.setName("statusbar"); // NOI18N
 
-        jMenu3.setMnemonic('N');
-        jMenu3.setText("New...");
-        jMenu3.setToolTipText("Make a new document.");
-        jMenu3.setName("file_new"); // NOI18N
+        progressbar.setFocusable(false);
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem1.setMnemonic('R');
-        jMenuItem1.setText("RR Article");
-        jMenuItem1.setToolTipText("Makes a RR-styled document.");
-        jMenuItem1.setName("file_new_rr"); // NOI18N
-        jMenu3.add(jMenuItem1);
+        javax.swing.GroupLayout statusbarLayout = new javax.swing.GroupLayout(statusbar);
+        statusbar.setLayout(statusbarLayout);
+        statusbarLayout.setHorizontalGroup(
+            statusbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusbarLayout.createSequentialGroup()
+                .addComponent(progressbar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 254, Short.MAX_VALUE))
+        );
+        statusbarLayout.setVerticalGroup(
+            statusbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statusbarLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(progressbar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem2.setMnemonic('B');
-        jMenuItem2.setText("BBCode Document");
-        jMenuItem2.setToolTipText("Makes a BBCode document.");
-        jMenuItem2.setName("file_new_bb"); // NOI18N
-        jMenu3.add(jMenuItem2);
+        menubar.setName("menu"); // NOI18N
 
-        jMenu1.add(jMenu3);
+        file.setMnemonic('F');
+        file.setText("File");
+        file.setToolTipText("");
+        file.setName("file"); // NOI18N
 
-        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem3.setMnemonic('O');
-        jMenuItem3.setText("Open...");
-        jMenuItem3.setToolTipText("Open a document.");
-        jMenuItem3.setName("file_open"); // NOI18N
-        jMenu1.add(jMenuItem3);
+        file_new.setMnemonic('N');
+        file_new.setText("New...");
+        file_new.setToolTipText("Make a new document.");
+        file_new.setName("file_new"); // NOI18N
 
-        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem4.setMnemonic('S');
-        jMenuItem4.setText("Save");
-        jMenuItem4.setToolTipText("Saves the current document.");
-        jMenuItem4.setName("file_save"); // NOI18N
-        jMenu1.add(jMenuItem4);
+        file_new_rr.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
+        file_new_rr.setMnemonic('R');
+        file_new_rr.setText("RR Article");
+        file_new_rr.setToolTipText("Makes a RR-styled document.");
+        file_new_rr.setName("file_new_rr"); // NOI18N
+        file_new.add(file_new_rr);
 
-        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem5.setMnemonic('A');
-        jMenuItem5.setText("Save As...");
-        jMenuItem5.setToolTipText("Saves as a new document.");
-        jMenuItem5.setName("file_saveas"); // NOI18N
-        jMenu1.add(jMenuItem5);
-        jMenu1.add(jSeparator1);
+        file_new_bb.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        file_new_bb.setMnemonic('B');
+        file_new_bb.setText("BBCode Document");
+        file_new_bb.setToolTipText("Makes a BBCode document.");
+        file_new_bb.setName("file_new_bb"); // NOI18N
+        file_new.add(file_new_bb);
 
-        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem6.setMnemonic('x');
-        jMenuItem6.setText("Exit");
-        jMenuItem6.setToolTipText("Exits Vibrancy.");
-        jMenuItem6.setName("file_exit"); // NOI18N
-        jMenu1.add(jMenuItem6);
+        file.add(file_new);
 
-        jMenuBar1.add(jMenu1);
+        file_open.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
+        file_open.setMnemonic('O');
+        file_open.setText("Open...");
+        file_open.setToolTipText("Open a document.");
+        file_open.setName("file_open"); // NOI18N
+        file.add(file_open);
 
-        jMenu2.setMnemonic('E');
-        jMenu2.setText("Edit");
-        jMenu2.setToolTipText("");
-        jMenu2.setName("edit"); // NOI18N
+        file_save.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        file_save.setMnemonic('S');
+        file_save.setText("Save");
+        file_save.setToolTipText("Saves the current document.");
+        file_save.setName("file_save"); // NOI18N
+        file.add(file_save);
 
-        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Z, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem7.setMnemonic('u');
-        jMenuItem7.setText("Undo");
-        jMenuItem7.setToolTipText("Undo the previous action.");
-        jMenuItem7.setEnabled(false);
-        jMenuItem7.setName("edit_undo"); // NOI18N
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        file_saveas.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        file_saveas.setMnemonic('A');
+        file_saveas.setText("Save As...");
+        file_saveas.setToolTipText("Saves as a new document.");
+        file_saveas.setName("file_saveas"); // NOI18N
+        file.add(file_saveas);
+        file.add(jSeparator1);
+
+        file_exit.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_MASK));
+        file_exit.setMnemonic('x');
+        file_exit.setText("Exit");
+        file_exit.setToolTipText("Exits Vibrancy.");
+        file_exit.setName("file_exit"); // NOI18N
+        file_exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                file_exitActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem7);
+        file.add(file_exit);
 
-        jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Y, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem8.setMnemonic('R');
-        jMenuItem8.setText("Redo");
-        jMenuItem8.setToolTipText("Redo the last action.");
-        jMenuItem8.setEnabled(false);
-        jMenuItem8.setName("edit_redo"); // NOI18N
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+        menubar.add(file);
+
+        edit.setMnemonic('E');
+        edit.setText("Edit");
+        edit.setToolTipText("");
+        edit.setName("edit"); // NOI18N
+
+        edit_undo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Z, java.awt.event.InputEvent.CTRL_MASK));
+        edit_undo.setMnemonic('u');
+        edit_undo.setText("Undo");
+        edit_undo.setToolTipText("Undo the previous action.");
+        edit_undo.setEnabled(false);
+        edit_undo.setName("edit_undo"); // NOI18N
+        edit_undo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
+                edit_undoActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem8);
-        jMenu2.add(jSeparator2);
+        edit.add(edit_undo);
 
-        jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem9.setText("Copy");
-        jMenuItem9.setToolTipText("Copies the selected text to the clipboard.");
-        jMenuItem9.setEnabled(false);
-        jMenuItem9.setName("edit_copy"); // NOI18N
-        jMenu2.add(jMenuItem9);
-
-        jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem10.setText("Cut");
-        jMenuItem10.setToolTipText("Cuts the selected text to the clipboard.");
-        jMenuItem10.setEnabled(false);
-        jMenuItem10.setName("edit_cut"); // NOI18N
-        jMenu2.add(jMenuItem10);
-
-        jMenuItem11.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem11.setText("Paste");
-        jMenuItem11.setToolTipText("Pastes from clipboard.");
-        jMenuItem11.setEnabled(false);
-        jMenuItem11.setName("edit_paste"); // NOI18N
-        jMenu2.add(jMenuItem11);
-
-        jMenuItem14.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_DELETE, 0));
-        jMenuItem14.setText("Delete");
-        jMenuItem14.setToolTipText("Deletes selected text.");
-        jMenuItem14.setEnabled(false);
-        jMenuItem14.setName("edit_del"); // NOI18N
-        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+        edit_redo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Y, java.awt.event.InputEvent.CTRL_MASK));
+        edit_redo.setMnemonic('R');
+        edit_redo.setText("Redo");
+        edit_redo.setToolTipText("Redo the last action.");
+        edit_redo.setEnabled(false);
+        edit_redo.setName("edit_redo"); // NOI18N
+        edit_redo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem14ActionPerformed(evt);
+                edit_redoActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem14);
-        jMenu2.add(jSeparator3);
+        edit.add(edit_redo);
+        edit.add(jSeparator2);
 
-        jMenuItem12.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem12.setMnemonic('i');
-        jMenuItem12.setText("Find...");
-        jMenuItem12.setToolTipText("Find instances of text.");
-        jMenuItem12.setName("edit_find"); // NOI18N
-        jMenu2.add(jMenuItem12);
+        edit_copy.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        edit_copy.setMnemonic('c');
+        edit_copy.setText("Copy");
+        edit_copy.setToolTipText("Copies the selected text to the clipboard.");
+        edit_copy.setEnabled(false);
+        edit_copy.setName("edit_copy"); // NOI18N
+        edit.add(edit_copy);
 
-        jMenuItem13.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem13.setMnemonic('p');
-        jMenuItem13.setText("Replace...");
-        jMenuItem13.setToolTipText("Find and replace text.");
-        jMenuItem13.setName("edit_replace"); // NOI18N
-        jMenu2.add(jMenuItem13);
-        jMenu2.add(jSeparator4);
+        edit_cut.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_MASK));
+        edit_cut.setMnemonic('u');
+        edit_cut.setText("Cut");
+        edit_cut.setToolTipText("Cuts the selected text to the clipboard.");
+        edit_cut.setEnabled(false);
+        edit_cut.setName("edit_cut"); // NOI18N
+        edit.add(edit_cut);
 
-        jMenuItem15.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem15.setText("Select All");
-        jMenuItem15.setToolTipText("Select all text.");
-        jMenuItem15.setName("edit_selectall"); // NOI18N
-        jMenu2.add(jMenuItem15);
+        edit_paste.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_MASK));
+        edit_paste.setMnemonic('p');
+        edit_paste.setText("Paste");
+        edit_paste.setToolTipText("Pastes from clipboard.");
+        edit_paste.setEnabled(false);
+        edit_paste.setName("edit_paste"); // NOI18N
+        edit.add(edit_paste);
 
-        jMenuBar1.add(jMenu2);
+        edit_del.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_DELETE, 0));
+        edit_del.setMnemonic('d');
+        edit_del.setText("Delete");
+        edit_del.setToolTipText("Deletes selected text.");
+        edit_del.setEnabled(false);
+        edit_del.setName("edit_del"); // NOI18N
+        edit_del.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                edit_delActionPerformed(evt);
+            }
+        });
+        edit.add(edit_del);
+        edit.add(jSeparator3);
 
-        jMenu4.setMnemonic('F');
-        jMenu4.setText("Format");
-        jMenu4.setToolTipText("");
-        jMenu4.setName("format"); // NOI18N
+        edit_find.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
+        edit_find.setMnemonic('i');
+        edit_find.setText("Find...");
+        edit_find.setToolTipText("Find instances of text.");
+        edit_find.setName("edit_find"); // NOI18N
+        edit.add(edit_find);
 
-        jMenu5.setMnemonic('t');
-        jMenu5.setText("Text...");
-        jMenu5.setToolTipText("Basic text tools.");
-        jMenu5.setName("format_text"); // NOI18N
+        edit_replace.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_MASK));
+        edit_replace.setMnemonic('r');
+        edit_replace.setText("Replace...");
+        edit_replace.setToolTipText("Find and replace text.");
+        edit_replace.setName("edit_replace"); // NOI18N
+        edit.add(edit_replace);
+        edit.add(jSeparator4);
 
-        jMenuItem16.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem16.setText("Bold");
-        jMenuItem16.setToolTipText("Bold text.");
-        jMenuItem16.setName("format_text_bold"); // NOI18N
-        jMenu5.add(jMenuItem16);
+        edit_selectall.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        edit_selectall.setMnemonic('a');
+        edit_selectall.setText("Select All");
+        edit_selectall.setToolTipText("Select all text.");
+        edit_selectall.setName("edit_selectall"); // NOI18N
+        edit.add(edit_selectall);
+        edit.add(jSeparator7);
 
-        jMenuItem17.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem17.setText("Italics");
-        jMenuItem17.setToolTipText("Italicize text.");
-        jMenuItem17.setName("format_text_italic"); // NOI18N
-        jMenu5.add(jMenuItem17);
+        edit_prefs.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
+        edit_prefs.setMnemonic('p');
+        edit_prefs.setText("Preferences...");
+        edit_prefs.setToolTipText("Adjust the settings.");
+        edit_prefs.setName("edit_prefs"); // NOI18N
+        edit.add(edit_prefs);
 
-        jMenuItem18.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem18.setText("Underline");
-        jMenuItem18.setToolTipText("Underline text.");
-        jMenuItem18.setName("format_text_underline"); // NOI18N
-        jMenu5.add(jMenuItem18);
+        menubar.add(edit);
 
-        jMenuItem19.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem19.setText("Strikethrough");
-        jMenuItem19.setToolTipText("Strike text.");
-        jMenuItem19.setName("format_text_strike"); // NOI18N
-        jMenu5.add(jMenuItem19);
+        format.setMnemonic('F');
+        format.setText("Format");
+        format.setToolTipText("");
+        format.setName("format"); // NOI18N
 
-        jMenu4.add(jMenu5);
+        format_text.setMnemonic('t');
+        format_text.setText("Text...");
+        format_text.setToolTipText("Basic text tools.");
+        format_text.setName("format_text"); // NOI18N
 
-        jMenuItem20.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem20.setText("Color...");
-        jMenuItem20.setToolTipText("Color text.");
-        jMenuItem20.setName("format_color"); // NOI18N
-        jMenu4.add(jMenuItem20);
+        format_text_bold.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
+        format_text_bold.setMnemonic('b');
+        format_text_bold.setText("Bold");
+        format_text_bold.setToolTipText("Bold text.");
+        format_text_bold.setName("format_text_bold"); // NOI18N
+        format_text.add(format_text_bold);
 
-        jMenu6.setText("Align...");
-        jMenu6.setToolTipText("Aligns text.");
-        jMenu6.setName("format_align"); // NOI18N
+        format_text_italic.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_MASK));
+        format_text_italic.setMnemonic('i');
+        format_text_italic.setText("Italics");
+        format_text_italic.setToolTipText("Italicize text.");
+        format_text_italic.setName("format_text_italic"); // NOI18N
+        format_text.add(format_text_italic);
 
-        jMenuItem23.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem23.setText("Left");
-        jMenuItem23.setToolTipText("Aligns text to the left (Default).");
-        jMenuItem23.setName("format_align_left"); // NOI18N
-        jMenu6.add(jMenuItem23);
+        format_text_underline.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_MASK));
+        format_text_underline.setMnemonic('u');
+        format_text_underline.setText("Underline");
+        format_text_underline.setToolTipText("Underline text.");
+        format_text_underline.setName("format_text_underline"); // NOI18N
+        format_text.add(format_text_underline);
 
-        jMenuItem24.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem24.setText("Center");
-        jMenuItem24.setToolTipText("Align text to the center.");
-        jMenuItem24.setName("format_align_center"); // NOI18N
-        jMenu6.add(jMenuItem24);
+        format_text_strike.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        format_text_strike.setMnemonic('s');
+        format_text_strike.setText("Strikethrough");
+        format_text_strike.setToolTipText("Strike text.");
+        format_text_strike.setName("format_text_strike"); // NOI18N
+        format_text.add(format_text_strike);
 
-        jMenuItem25.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem25.setText("Right");
-        jMenuItem25.setToolTipText("Aligns text to the right.");
-        jMenuItem25.setName("format_align_right"); // NOI18N
-        jMenu6.add(jMenuItem25);
+        format.add(format_text);
 
-        jMenuItem26.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_J, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem26.setText("Justify");
-        jMenuItem26.setToolTipText("Justifies text.");
-        jMenuItem26.setName("format_align_justify"); // NOI18N
-        jMenu6.add(jMenuItem26);
+        format_color.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK));
+        format_color.setMnemonic('c');
+        format_color.setText("Color...");
+        format_color.setToolTipText("Color text.");
+        format_color.setName("format_color"); // NOI18N
+        format.add(format_color);
 
-        jMenu4.add(jMenu6);
+        format_size.setMnemonic('s');
+        format_size.setText("Size...");
+        format_size.setToolTipText("Change text size.");
+        format_size.setName("format_size"); // NOI18N
+        format.add(format_size);
 
-        jMenuItem21.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem21.setText("Quote...");
-        jMenuItem21.setToolTipText("Puts the text into a quotation.");
-        jMenuItem21.setName("format_quote"); // NOI18N
-        jMenu4.add(jMenuItem21);
+        formula_align.setMnemonic('a');
+        formula_align.setText("Align...");
+        formula_align.setToolTipText("Aligns text.");
+        formula_align.setName("format_align"); // NOI18N
 
-        jMenuItem22.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem22.setText("Code...");
-        jMenuItem22.setToolTipText("Puts the text into code format.");
-        jMenuItem22.setName("format_code"); // NOI18N
-        jMenu4.add(jMenuItem22);
+        format_align_left.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_MASK));
+        format_align_left.setMnemonic('l');
+        format_align_left.setText("Left");
+        format_align_left.setToolTipText("Aligns text to the left (Default).");
+        format_align_left.setName("format_align_left"); // NOI18N
+        formula_align.add(format_align_left);
 
-        jMenuBar1.add(jMenu4);
+        format_align_center.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        format_align_center.setMnemonic('c');
+        format_align_center.setText("Center");
+        format_align_center.setToolTipText("Align text to the center.");
+        format_align_center.setName("format_align_center"); // NOI18N
+        formula_align.add(format_align_center);
 
-        setJMenuBar(jMenuBar1);
+        format_align_right.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
+        format_align_right.setMnemonic('r');
+        format_align_right.setText("Right");
+        format_align_right.setToolTipText("Aligns text to the right.");
+        format_align_right.setName("format_align_right"); // NOI18N
+        formula_align.add(format_align_right);
+
+        format_align_justify.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_J, java.awt.event.InputEvent.CTRL_MASK));
+        format_align_justify.setMnemonic('j');
+        format_align_justify.setText("Justify");
+        format_align_justify.setToolTipText("Justifies text.");
+        format_align_justify.setName("format_align_justify"); // NOI18N
+        formula_align.add(format_align_justify);
+
+        format.add(formula_align);
+
+        format_quote.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.ALT_MASK));
+        format_quote.setMnemonic('q');
+        format_quote.setText("Quote...");
+        format_quote.setToolTipText("Puts the text into a quotation.");
+        format_quote.setName("format_quote"); // NOI18N
+        format.add(format_quote);
+
+        format_code.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.ALT_MASK));
+        format_code.setMnemonic('o');
+        format_code.setText("Code...");
+        format_code.setToolTipText("Puts the text into code format.");
+        format_code.setName("format_code"); // NOI18N
+        format.add(format_code);
+
+        format_separator.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.ALT_MASK));
+        format_separator.setMnemonic('i');
+        format_separator.setText("Insert separator");
+        format_separator.setToolTipText("Insters a horizontal separator.");
+        format_separator.setName("format_separator"); // NOI18N
+        format.add(format_separator);
+
+        menubar.add(format);
+
+        view.setMnemonic('v');
+        view.setText("View");
+        view.setToolTipText("");
+        view.setName("view"); // NOI18N
+
+        view_in.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_EQUALS, java.awt.event.InputEvent.CTRL_MASK));
+        view_in.setMnemonic('i');
+        view_in.setText("Zoom In");
+        view_in.setToolTipText("Increases the zoom.");
+        view_in.setName("view_zoomin"); // NOI18N
+        view_in.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                view_inActionPerformed(evt);
+            }
+        });
+        view.add(view_in);
+
+        view_out.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_MINUS, java.awt.event.InputEvent.CTRL_MASK));
+        view_out.setMnemonic('O');
+        view_out.setText("Zoom Out");
+        view_out.setToolTipText("Decreases the zoom.");
+        view_out.setName("view_zoomout"); // NOI18N
+        view.add(view_out);
+        view.add(jSeparator5);
+
+        view_statusbar.setMnemonic('s');
+        view_statusbar.setSelected(true);
+        view_statusbar.setText("Status Bar");
+        view_statusbar.setToolTipText("Toggles the status bar.");
+        view_statusbar.setName("view_statusbar"); // NOI18N
+        view.add(view_statusbar);
+
+        menubar.add(view);
+
+        help.setMnemonic('h');
+        help.setText("Help");
+        help.setToolTipText("");
+        help.setName("help"); // NOI18N
+
+        help_man.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
+        help_man.setMnemonic('u');
+        help_man.setText("User Manual");
+        help_man.setToolTipText("Opens the manual.");
+        help_man.setName("help_man"); // NOI18N
+        help.add(help_man);
+        help.add(jSeparator6);
+
+        help_about.setMnemonic('a');
+        help_about.setText("About Vibrancy");
+        help_about.setToolTipText("What even is this?");
+        help_about.setName("help_about"); // NOI18N
+        help.add(help_about);
+
+        menubar.add(help);
+
+        setJMenuBar(menubar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(statusbar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 269, Short.MAX_VALUE)
+                .addComponent(statusbar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void edit_undoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edit_undoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_edit_undoActionPerformed
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+    private void edit_redoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edit_redoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
+    }//GEN-LAST:event_edit_redoActionPerformed
 
-    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+    private void edit_delActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edit_delActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem14ActionPerformed
+    }//GEN-LAST:event_edit_delActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void view_inActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_view_inActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_view_inActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainFrame().setVisible(true);
-            }
-        });
-    }
+    private void file_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_file_exitActionPerformed
+        /** Exits the program */
+        System.exit(0);
+    }//GEN-LAST:event_file_exitActionPerformed
+
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new MainFrame().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
-    private javax.swing.JMenuItem jMenuItem15;
-    private javax.swing.JMenuItem jMenuItem16;
-    private javax.swing.JMenuItem jMenuItem17;
-    private javax.swing.JMenuItem jMenuItem18;
-    private javax.swing.JMenuItem jMenuItem19;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem20;
-    private javax.swing.JMenuItem jMenuItem21;
-    private javax.swing.JMenuItem jMenuItem22;
-    private javax.swing.JMenuItem jMenuItem23;
-    private javax.swing.JMenuItem jMenuItem24;
-    private javax.swing.JMenuItem jMenuItem25;
-    private javax.swing.JMenuItem jMenuItem26;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenu edit;
+    private javax.swing.JMenuItem edit_copy;
+    private javax.swing.JMenuItem edit_cut;
+    private javax.swing.JMenuItem edit_del;
+    private javax.swing.JMenuItem edit_find;
+    private javax.swing.JMenuItem edit_paste;
+    private javax.swing.JMenuItem edit_prefs;
+    private javax.swing.JMenuItem edit_redo;
+    private javax.swing.JMenuItem edit_replace;
+    private javax.swing.JMenuItem edit_selectall;
+    private javax.swing.JMenuItem edit_undo;
+    private javax.swing.JMenu file;
+    private javax.swing.JMenuItem file_exit;
+    private javax.swing.JMenu file_new;
+    private javax.swing.JMenuItem file_new_bb;
+    private javax.swing.JMenuItem file_new_rr;
+    private javax.swing.JMenuItem file_open;
+    private javax.swing.JMenuItem file_save;
+    private javax.swing.JMenuItem file_saveas;
+    private javax.swing.JMenu format;
+    private javax.swing.JMenuItem format_align_center;
+    private javax.swing.JMenuItem format_align_justify;
+    private javax.swing.JMenuItem format_align_left;
+    private javax.swing.JMenuItem format_align_right;
+    private javax.swing.JMenuItem format_code;
+    private javax.swing.JMenuItem format_color;
+    private javax.swing.JMenuItem format_quote;
+    private javax.swing.JMenuItem format_separator;
+    private javax.swing.JMenuItem format_size;
+    private javax.swing.JMenu format_text;
+    private javax.swing.JMenuItem format_text_bold;
+    private javax.swing.JMenuItem format_text_italic;
+    private javax.swing.JMenuItem format_text_strike;
+    private javax.swing.JMenuItem format_text_underline;
+    private javax.swing.JMenu formula_align;
+    private javax.swing.JMenu help;
+    private javax.swing.JMenuItem help_about;
+    private javax.swing.JMenuItem help_man;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JPopupMenu.Separator jSeparator4;
+    private javax.swing.JPopupMenu.Separator jSeparator5;
+    private javax.swing.JPopupMenu.Separator jSeparator6;
+    private javax.swing.JPopupMenu.Separator jSeparator7;
+    private javax.swing.JMenuBar menubar;
+    private javax.swing.JProgressBar progressbar;
+    private javax.swing.JPanel statusbar;
+    private javax.swing.JMenu view;
+    private javax.swing.JMenuItem view_in;
+    private javax.swing.JMenuItem view_out;
+    private javax.swing.JCheckBoxMenuItem view_statusbar;
     // End of variables declaration//GEN-END:variables
 }
