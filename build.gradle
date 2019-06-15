@@ -5,7 +5,7 @@ apply plugin: 'application'
 
 description = 'WYSIWIG BBCode Editor for RR'
 
-mainClassName = 'BBCodeEditor.Main'
+mainClassName = 'Vibrancy.Main'
 
 repositories {
     jcenter()
